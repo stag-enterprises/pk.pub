@@ -1,0 +1,2 @@
+.Pages
+* xref:index.adoc[]

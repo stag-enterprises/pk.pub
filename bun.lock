@@ -4,11 +4,9 @@
   "workspaces": {
     "": {
       "name": "workspace",
-      "dependencies": {
-        "@ast-grep/cli": "^0.39.9",
-      },
       "devDependencies": {
         "@antora/lunr-extension": "^1.0.0-alpha.12",
+        "@ast-grep/cli": "^0.39.9",
         "antora": "3.1.14",
         "serve": "^14.2.5",
       },

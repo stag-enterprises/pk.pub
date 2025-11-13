@@ -1,0 +1,5 @@
+name: 'ROOT'
+version: null
+display_version: 'Main'
+nav:
+  - 'modules/ROOT/nav.adoc'

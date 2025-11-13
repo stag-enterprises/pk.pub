@@ -7,8 +7,8 @@ content:
   branches: [ 'HEAD' ]
   worktrees: true # use uncommitted changes if any
   sources:
-    - url: https://github.com/stag-enterprises/pk.pub
-    - url: https://github.com/stag-enterprises/pk.pv
+    - url: './../'
+      start_paths: 'components/*'
 ui:
   bundle:
     url: './../build/bundle'
