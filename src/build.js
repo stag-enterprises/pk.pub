@@ -22,7 +22,7 @@ const { values } = parseArgs({
 
 if (values.fetch || !existsSync(BUNDLE_DEST)) {
 	console.info("Downloading UI bundle");
-	rmSync(BUNDLE_DEST, { recursive: true });
+	if (existsSync(BUNDLE_DEST)) rmSync(BUNDLE_DEST, { recursive: true });
 	mkdirSync(BUNDLE_DEST, { recursive: true });
 	await Bun.write(BUNDLE_FILE, await fetch(BUNDLE_ZIP));
 
@@ -33,7 +33,7 @@ if (values.fetch || !existsSync(BUNDLE_DEST)) {
 }
 
 console.info("Copying UI bundle");
-rmSync(BUNDLE_PATCHED, { recursive: true });
+if (existsSync(BUNDLE_PATCHED)) rmSync(BUNDLE_PATCHED, { recursive: true });
 cpSync(BUNDLE_DEST, BUNDLE_PATCHED, { recursive: true });
 
 console.info("Patching UI bundle");
